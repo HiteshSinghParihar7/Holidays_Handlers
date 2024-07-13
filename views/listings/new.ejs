@@ -1,0 +1,47 @@
+<%- layout("/layouts/boilerplate") %>
+<body>
+<div class="row">
+    <div class="col-8 offset-2">
+    <form method="POST" action="/listings" class="needs-validation" novalidate>
+        <br><br>
+        <h3>Create a New Holiday Plan</h3>
+        <div class="mb-3" >
+            <label for="title" class="form-label">Title</label>
+        <input name ="listing[title]" placeholder="enter catchy title" type="text" class="form-control" required />
+        <div class="valid-feedback">Title seems nice!</div>
+        </div>
+        <div class="mb-3" >
+            <label for="description" class="form-label">Description</label>
+        <textarea name="listing[description]" class="form-control" required></textarea>
+            <div class="invalid-feedback">Short Description , Please!</div>
+        </div>
+        <div class="mb-3">
+            <label for="image" class="form-label">Image URL/Link</label>
+        <input name ="listing[image]" placeholder="enter image url/link" type="text" class="form-control" />
+        <div class="invalid-feedback">Enter a valid url/link</div>
+        </div>
+        <div class="row">
+            <div class="mb-3 col-md-4">
+                <label for="price" class="form-label">Price</label>
+                <input name ="listing[price]" placeholder="enter price" type="number" class="form-control" required />
+                <div class="invalid-feedback">Enter a valid Price</div>
+            </div>
+            
+            <div class="mb-3 col-md-8">
+                <label for="country" class="form-label">Country</label>
+            <input name ="listing[country]" placeholder="enter location" type="text" class="form-control" required />
+            <div class="invalid-feedback">Enter a valid Country name</div>
+            </div>
+        </div>
+        
+        <div class="mb-4">
+            <label for="country" class="form-label">Location</label>
+        <input name ="listing[location]" placeholder="enter location" type="text" class="form-control" required/>
+        <div class="invalid-feedback">Enter a valid Location.</div>
+        </div>
+        <button class="btn btn-dark add-btn mt-3">Add</button>
+        <br><br>
+    </form>
+    </div>
+</div>
+</body>
