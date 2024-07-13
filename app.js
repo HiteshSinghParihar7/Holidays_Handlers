@@ -54,7 +54,7 @@ store.on("error", () => {
 
 const sessionOptions = {
     store,
-    secret: process.env.SECRET,
+    secret: "HSPCR7",
     resave: false,
     saveUninitialized: true,
     cookie: {
@@ -91,6 +91,7 @@ app.use((req, res, next) => {
     res.locals.currUser = req.user;
     next();
 });
+
 
 
 // app.get("/ls_test", async (req, res) => {
